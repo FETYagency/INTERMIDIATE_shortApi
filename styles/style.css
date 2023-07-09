@@ -216,6 +216,8 @@ header > .wrap > .M_nav > .createButtons > button.signBtn:hover {
           padding-block-start: 5.5rem;
   -webkit-padding-after: 0;
           padding-block-end: 0;
+  overflow-x: hidden;
+  overflow-inline: hidden;
   background: #fff;
 }
 
