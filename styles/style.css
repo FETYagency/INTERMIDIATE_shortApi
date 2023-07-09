@@ -200,7 +200,7 @@ header > .wrap > .M_nav > .createButtons > button.loginBtn {
 header > .wrap > .M_nav > .createButtons > button.signBtn:hover {
   background: #9AE3E3;
 }
-@media (width > 750px) {
+@media (width > 775px) {
   header > .wrap > .burger {
     display: none;
   }
