@@ -86,15 +86,6 @@ document.body.addEventListener("click", e=>{
     }
 })
 
-goTo.forEach(e=>{
-    e.addEventListener("click",()=>{
-        window.scrollTo({
-            top: 629,
-            behavior: "smooth",
-        });
-    })
-})
-
 const navBtn = document.querySelector("#burger")
 const nav = document.querySelector(".M_nav")
 navBtn.addEventListener("click", ()=>{
@@ -109,10 +100,27 @@ window.addEventListener("scroll", ()=>{
     navBtn.checked=false
 })
 
-const media = window.matchMedia("(min-width:750px)");
+const media = window.matchMedia("(max-width:750px)");
 media.addEventListener("change", ()=>{
     nav.dataset.state="close"
     navBtn.checked=false
+})
+goTo.forEach(e=>{
+    e.addEventListener("click",()=>{
+        console.log(media)
+        if(media.matches){
+            window.scrollTo({
+                top: 906,
+                behavior: "smooth",
+            });
+        }else{
+            window.scrollTo({
+                top: 629,
+                behavior: "smooth",
+            });
+        }
+
+    })
 })
 
 document.body.addEventListener("keydown", (e)=>{
